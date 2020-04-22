@@ -14,7 +14,7 @@
 			#colo  {
   
 
-  background: linear-gradient(to top ,  grey, skyblue);
+  background: linear-gradient(to bottom ,  grey, skyblue);
  
  /*mise en forme de la couleur du fond*/
 }
@@ -46,7 +46,7 @@
         Carte Graphique 
       </a>
       <div class="dropdown-menu">
-        <a class="dropdown-item" href="ced.html">Importation - exportation</a>
+        <a class="dropdown-item" href="code/importexport.html">Importation - exportation</a>
         <a class="dropdown-item" href="#"> Production </a>
         
       </div>
