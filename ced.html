@@ -131,7 +131,7 @@
 	const projection = d3.geoMercator()
 		
 		.scale(1200)
-		.translate([300, 550]);
+		.translate([350, 550]);
 	
 	path.projection(projection);
  
@@ -174,7 +174,7 @@ var change = document.getElementById('choix').selectedOptions[0].text;
 		.range(colors);
 
 	var legend = svg.append('g')
-		.attr('transform', 'translate(770, 40)')
+		.attr('transform', 'translate(820, 40)')
 		.attr('id', 'legend');
 		
 		legend.selectAll()
@@ -195,7 +195,7 @@ var change = document.getElementById('choix').selectedOptions[0].text;
 		.range([0, colors.length * 40]);
 
 		var legendAxis = svg.append("g")
-		.attr('transform', 'translate(830, 40)')
+		.attr('transform', 'translate(880, 40)')
 		.call(d3.axisRight(legendScale).ticks(20));
 
 	
