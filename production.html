@@ -188,7 +188,7 @@ var changement = document.getElementById('annee').selectedOptions[0].text;
 
 	var promises = [];
 promises.push(d3.json('https://projetvisualisation2.github.io/Projevisualisation2.github.io/MapData2/cedeao.geojson'));
-promises.push(d3.csv('https://projetvisualisation2.github.io/Projevisualisation2.github.io/MapData/'+changement+'.csv '));
+promises.push(d3.csv('https://projetvisualisation2.github.io/Projevisualisation2.github.io/MapData2/'+changement+'.csv '));
 
 Promise.all(promises).then(function(values) {
     const geojson = values[0]; // Récupération de la première promesse : le contenu du fichier JSON
