@@ -1,0 +1,270 @@
+<html >
+	
+<head>
+    <meta charset="UTF-8">
+
+<!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Visualisation des données économiques sur les céréales dans la zone CEDEAO | Le site du projet</title>
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="Visualisation des données économiques sur les céréales dans la zone CEDEAO" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Le site du projet" />
+<meta property="og:description" content="Le site du projet" />
+<link rel="canonical" href="https://projetvisualisation2.github.io/Projevisualisation2.github.io/" />
+<meta property="og:url" content="https://projetvisualisation2.github.io/Projevisualisation2.github.io/" />
+<meta property="og:site_name" content="Visualisation des données économiques sur les céréales dans la zone CEDEAO" />
+<script type="application/ld+json">
+{"@type":"WebSite","url":"https://projetvisualisation2.github.io/Projevisualisation2.github.io/","name":"Visualisation des données économiques sur les céréales dans la zone CEDEAO","headline":"Visualisation des données économiques sur les céréales dans la zone CEDEAO","description":"Le site du projet","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <link rel="stylesheet" href="/Projevisualisation2.github.io/assets/css/style.css?v=0dd75407ba4ab3f6f1d64217538581758765ded6">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">Visualisation des données économiques sur les céréales dans la zone CEDEAO</h1>
+      <h2 class="project-tagline">Le site du projet</h2>
+      
+        <a href="https://github.com/Projetvisualisation2/Projevisualisation2.github.io" class="btn">View on GitHub</a>
+      
+      
+    </section>
+
+    <section class="main-content">
+      <html lang="en">
+	
+<head>
+<meta charset="utf-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+<title>CARTE</title>
+
+<script src="https://d3js.org/d3.v5.min.js"></script>
+
+<style type="text/css">
+
+	div.tooltip {
+		position: absolute;
+		opacity:0.8;
+		z-index:1000;
+		text-align:left;
+		border-radius:4px;
+		-moz-border-radius:4px;
+		-webkit-border-radius:4px;
+		padding:8px;
+		color:#fff;
+		background-color:#000;
+		font: 50px sans-serif;
+		max-width: 500px;
+		max-height: 300px;
+	}
+
+		display: block;
+	#svg {
+		margin: auto;
+
+	}
+
+
+	#col1  {
+  
+
+  background: linear-gradient(to top ,  white, skyblue);
+ 
+ /*mise en forme de la couleur du forme*/
+}
+		</style>
+	</head>
+	
+	
+<body id ="col1" >
+	
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <!-- Brand -->
+  <a class="navbar-brand" href="index.html"><img src="image/cereale.png" alt="Logo" style="width:100px; height=100px;"></a>
+  
+
+  <!-- Links -->
+  <ul class="navbar-nav">
+    <li class="nav-item">
+      <a class="nav-link" href="index.html">HOME</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Stacked Bart Chart </a>
+    </li>
+  
+   <li class="nav-item">
+      <a class="nav-link" href="#"> Graphe évolutif </a>
+    </li>
+    
+    <!-- Dropdown -->
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+        Carte Graphique 
+      </a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="code/importexport.html">Importation - exportation</a>
+        <a class="dropdown-item" href="#"> Production </a>
+        
+      </div>
+    </li>
+  </ul>
+</nav>
+<br>
+		
+	
+		
+<H5 style="text-align:center;"> <em><mark>Visualisations des flux des differentes cereales sur une carte dynamique</mark></em></H5>
+<div><form>
+<label style= "font-size : 20;color:red;" title="choissiez le type de flux">Selectionner le flux :</label>
+<select id="choix" onchange="flux()"  style= "font-size : 20;">
+<option>ImportationsQuantite</option>
+<option>ImportationsValeur</option>
+<option>ExportationsQuantite</option>
+<option>ExportationsValeur</option>
+</select>
+
+
+
+<label style= "font-size : 20;color:red;  "  title="choissiez le type de cereale"><bold>Selectionner le cereale :</bold></label>
+<select id="cereale" onchange="flux()" style= "font-size : 20 ; "  >
+<option>Riz</option>
+<option>Ble</option>
+<option>Sorgho</option>
+<option>Mil</option>
+<option>Mais</option>
+</select>
+</form>
+</div>
+
+<div id="map"></div>
+</body>
+</html>
+<script type="text/javascript">	
+
+	function flux()
+{
+
+	var efface = d3.select("#map");
+	var tout = efface.selectAll('*');
+	tout.remove();
+
+	const width = 1200, 
+		height = 500,
+		colors = ['skyblue','#ffffe6',  '#ffff4d','#ffd11a',  '#ffd699', '#ffad33',  '#e68a00', '#ff5c33',  '#e62e00', '#991f00'];
+	
+	const path = d3.geoPath();
+	
+	const projection = d3.geoMercator()
+		
+		.scale(1200)
+		.translate([400, 550]);
+	
+	path.projection(projection);
+ 
+	const svg = d3.select('#map').append("svg")
+		.attr("id", "svg")
+		.attr("width", width)
+		.attr("height", height)
+		.attr("class", "Blues");
+
+	
+	const deps = svg.append("g");
+
+var changement = document.getElementById('cereale').selectedOptions[0].text;
+
+	var promises = [];
+promises.push(d3.json('https://projetvisualisation2.github.io/Projevisualisation2.github.io/MapData/cedeao.geojson'));
+promises.push(d3.csv('https://projetvisualisation2.github.io/Projevisualisation2.github.io/MapData/'+changement+'.csv '));
+
+Promise.all(promises).then(function(values) {
+    const geojson = values[0]; // Récupération de la première promesse : le contenu du fichier JSON
+    const csv = values[1]; // Récupération de la deuxième promesse : le contenu du fichier csv
+    
+var change = document.getElementById('choix').selectedOptions[0].text;
+		
+	var features = deps
+		.selectAll("path")
+		.data(geojson.features)
+		.enter()
+		.append("path")
+		.attr('id', function(d) {return "d" + d.properties.code;})
+		.attr("stroke","black")
+		.attr("stroke-width",1.8)
+		.attr("d", path);
+
+	const min = d3.min(csv, function(e) { return +e[change]; }),
+		  max = d3.max(csv, function(e) { return+e[change]; });	
+
+	var quantile = d3.scaleQuantile()
+		.domain([0, Math.sqrt(max )])
+		.range(colors);
+
+	var legend = svg.append('g')
+		.attr('transform', 'translate(820, 40)')
+		.attr('id', 'legend');
+		
+		legend.selectAll()
+			.data(d3.range(colors.length))
+			.enter().append('svg:rect')
+				.attr('height', '40px')
+				.attr('width', '40px')
+				.attr('x', 5)
+				.attr('y', function(d) { return d * 40; })
+				.attr("stroke-width",0)
+				.style("fill", function(d) { return colors[d]; });
+
+
+	
+				
+	var legendScale = d3.scaleSqrt()
+		.domain([0,max])
+		.range([0, colors.length * 40]);
+
+		var legendAxis = svg.append("g")
+		.attr('transform', 'translate(880, 40)')
+		.call(d3.axisRight(legendScale).ticks(20));
+
+	
+	
+	csv.forEach(function(e,i) {
+		d3.select("#d" + e.code)
+			.style("fill", function(d) { return quantile(Math.sqrt(+e[change])); })
+			.on("mouseover", function(d) {
+				div.transition()        
+					.duration(200)      
+					.style("opacity", .9);
+				div.html("<b> Pays : </b>" + e.name + "<br>"
+						+ "<b> </b>" + e[change] + "<br>")
+					.style("left", (d3.event.pageX + 30) + "px")     
+					.style("top", (d3.event.pageY - 30) + "px");
+			})
+			.on("mouseout", function(d) {
+				div.style("opacity", 0);
+				div.html("")
+					.style("left", "-500px")
+					.style("top", "-500px");
+			});
+	});
+});	
+
+
+
+ 
+
+
+	// Append a DIV for the tooltip
+	var div = d3.select("body").append("div")   
+		.attr("class", "tooltip")               
+		.style("opacity", 0);		
+	
+}
+	
+
+</script>
