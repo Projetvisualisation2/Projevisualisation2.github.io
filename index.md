@@ -33,7 +33,7 @@
       <a class="nav-link" href="index.html">HOME</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="#">Stacked Bart Chart </a>
+      <a class="nav-link" href="BartChartIndex.html">Stacked Bart Chart </a>
     </li>
   
    <li class="nav-item">
