@@ -1,0 +1,152 @@
+
+<!-- Code from d3-graph-gallery.com -->
+<!DOCTYPE html>
+<meta charset="utf-8">
+
+<!-- Load d3.js -->
+<script type="text/javascript" src="https://d3js.org/d3.v4.js"></script>
+
+    
+<!-- Create a div where the graph will take place -->
+   <div>
+    <h4> <center> PRODUCTION DE CEREALES DANS LES PAYS DE LA CEDEAO </center></h4>
+    <form align=center>
+    <label>Selectionner une année :</label>
+    <select id="choix" onchange="zone1()">
+    <option>Choisir une option</option>
+    <option>2018</option>
+    <option>2017</option>
+    <option>2016</option>
+    <option>2015</option>
+    <option>2014</option>
+    <option>2013</option>
+    <option>2012</option>
+    <option>2011</option>
+    <option>2010</option>
+    <option>2009</option>
+    <option>2008</option>
+    </select>
+    </form>
+    <br/>
+    </div>
+    <svg id="my_dataviz" width="1200" height="700"></svg>
+    
+<script>
+
+// set the dimensions and margins of the graph
+function zone1()
+{
+var pa_nice = d3.select("#my_dataviz");
+var mansour = pa_nice.selectAll('*');
+mansour.remove();
+
+var margin = {top:30, right:300, bottom:100, left:350},
+width = 1200 - margin.left - margin.right,
+height = 650 - margin.top - margin.bottom;
+
+// append the svg object to the body of the page
+var svg = d3.select("#my_dataviz")
+  .append("svg")
+    .attr("width", width + margin.left + margin.right)
+    .attr("height", height + margin.top + margin.bottom)
+  .append("g")
+    .attr("transform",
+          "translate(" + margin.left + "," + margin.top + ")");
+
+// Parse the Data
+var djamel = document.getElementById('choix').selectedOptions[0].text;
+var yod = 'https://projetvisualisation2.github.io/Projevisualisation2.github.io/BartChartData/'+djamel+'.csv';;
+d3.csv(yod, function(data) {
+
+    console.log(data)
+
+  // List of subgroups = header of the csv files = soil condition here
+  var subgroups = data.columns.slice(1)
+
+  // List of groups = species here = value of the first column called group -> I show them on the X axis
+  var groups = d3.map(data, function(d){return(d.group)}).keys()
+
+  // Add X axis
+  var x = d3.scaleBand()
+      .domain(groups)
+      .range([0,width],0.40)
+      .padding([0.2])
+ svg.append("g")
+    .attr("transform", "translate(0," + height + ")")
+    .call(d3.axisBottom(x).tickSizeOuter(0))
+    .selectAll("text")
+    .style("font-size", "8px")
+    .style("text-anchor", "end")
+    .attr("dx", "-.8em")
+    .attr("dy", "-.55em")
+    .attr("transform", "rotate(-45)" );
+
+  // Add Y axis
+  var y = d3.scaleLinear()
+    .domain([0, 30000000])
+    .range([height, 0 ]);
+  svg.append("g")
+    .call(d3.axisLeft(y));
+
+  // color palette = one color per subgroup
+  var color = d3.scaleOrdinal()
+    .domain(subgroups)
+    .range(['#fbb4ae','#ff7f00','#a6cee3','#1b9e77','#7fc97f','#a50026']);
+
+  //stack the data? --> stack per subgroup
+  var stackedData = d3.stack()
+    .keys(subgroups)
+    (data)
+
+  // Show the bars
+  svg.append("g")
+    .selectAll("g")
+    // Enter in the stack data = loop key per key = group per group
+    .data(stackedData)
+    .enter().append("g")
+      .attr("fill", function(d) { return color(d.key); })
+      .selectAll("rect")
+      // enter a second time = loop subgroup per subgroup to add all rectangles
+      .data(function(d) { return d; })
+      .enter().append("rect")
+        .attr("x", function(d) { return x(d.data.group); })
+        .attr("y", function(d) { return y(d[1]); })
+        .attr("height", function(d) { return y(d[0]) - y(d[1]); })
+        .attr("width",x.bandwidth())
+});
+
+
+
+/// La Legende	
+// create a list of keys
+var keys = ["Blé","Fonio","Mais","Mils","Riz","Sorgho"]
+// Usually you have a color scale in your chart already
+var color = d3.scaleOrdinal()
+  .domain(keys)
+  .range(['#fbb4ae','#ff7f00','#a6cee3','#1b9e77','#7fc97f','#a50026']);
+// Add one dot in the legend for each name.
+var size = 10
+svg.selectAll("mydots")
+  .data(keys)
+  .enter()
+  .append("rect")
+    .attr("x", 500)
+    .attr("y", function(d,i){ return 100 + i*(size+5)}) // 100 is where the first dot appears. 25 is the distance between dots
+    .attr("width", size)
+    .attr("height", size)
+    .style("fill", function(d){ return color(d)})
+
+// Add one dot in the legend for each name.
+svg.selectAll("mylabels")
+  .data(keys)
+  .enter()
+  .append("text")
+    .attr("x", 500 + size*1.2)
+    .attr("y", function(d,i){ return 100 + i*(size+5) + (size/2)}) // 100 is where the first dot appears. 25 is the distance between dots
+    .style("fill", function(d){ return color(d)})
+    .text(function(d){ return d})
+    .attr("text-anchor", "left")
+    .style("alignment-baseline", "middle")   
+} 
+
+</script>
