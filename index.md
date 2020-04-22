@@ -7,12 +7,24 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+
+<style type="text/css">
+	
+			#colo  {
+  
+
+  background: linear-gradient(to top ,  white, skyblue);
+ 
+ /*mise en forme de la couleur du fond*/
+}
+		</style>
 </head>
-<body>
+<body id= "colo">
 
 <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
   <!-- Brand -->
-  <a class="navbar-brand" href="index.html"><img src="image/cereale.png" alt="Logo" style="width:40px;"></a>
+  <a class="navbar-brand" href="index.html"><img src="image/cereale.png" alt="Logo" style="width:60px; height=60px;"></a>
   
 
   <!-- Links -->
@@ -34,7 +46,7 @@
         Carte Graphique 
       </a>
       <div class="dropdown-menu">
-        <a class="dropdown-item" href=""ced.html"">Importation - exportation</a>
+        <a class="dropdown-item" href="ced.html">Importation - exportation</a>
         <a class="dropdown-item" href="#"> Production </a>
         
       </div>
@@ -53,7 +65,7 @@ population a été multipliée par 2,5. Compte tenu des réalités sociales (sub
  <img src="image/Fonio.jpg" class="rounded-circle" alt="" width="304" height="236"> 
  <img src="image/Mais.jpg" class="rounded-circle" alt="" width="304" height="236"> 
  <img src="image/Mil.jpg" class="rounded-circle" alt="" width="304" height="236"> 
- <img src="image/riz.jpg" class="rounded-circle" alt="" width="304" height="236"> 
+ <img src="image/Riz.jpg" class="rounded-circle" alt="" width="304" height="236"> 
  <img src="image/Sorgho.jpg" class="rounded-circle" alt="" width="304" height="236"> 
 </div>
 
