@@ -14,7 +14,7 @@
 			#colo  {
   
 
-  background: linear-gradient(to bottom ,  grey, skyblue);
+  background: linear-gradient(to bottom ,  '#ffffe6', skyblue);
  
  /*mise en forme de la couleur du fond*/
 }
