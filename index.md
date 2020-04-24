@@ -14,7 +14,7 @@
 			#colo  {
   
 
-  background: linear-gradient(to bottom ,  '#ffffe6', skyblue);
+  background: linear-gradient(to top ,  'LightYellow', skyblue);
  
  /*mise en forme de la couleur du fond*/
 }
@@ -48,9 +48,13 @@
       <div class="dropdown-menu">
         <a class="dropdown-item" href="importexport.html">Importation - exportation</a>
         <a class="dropdown-item" href="production.html"> Production </a>
-        
       </div>
     </li>
+    
+    <li class="nav-item">
+      <a class="nav-link" href="propos.html"> A propos </a>
+    </li>
+    
   </ul>
 </nav>
 <br>
