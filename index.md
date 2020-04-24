@@ -69,8 +69,8 @@ population a été multipliée par 2,5. Compte tenu des réalités sociales (sub
   
  <img src="image/Ble.jpg" class="rounded-circle" alt="" width="304" height="236"> 
  <img src="image/Fonio.jpg" class="rounded-circle" alt="" width="304" height="236"> 
- <img src="image/Mais.jpg" class="rounded-circle" alt="" width="304" height="236"> 
- <img src="image/Mil.jpg" class="rounded-circle" alt="" width="304" height="236"> 
+ <img src="image/Mais.jpg" class="img-thumbnail" alt="" width="304" height="236"> 
+ <img src="image/Mil.jpg" class="img-thumbnail" alt="" width="304" height="236"> 
  <img src="image/Riz.jpg" class="rounded-circle" alt="" width="304" height="236"> 
  <img src="image/Sorgho.jpg" class="rounded-circle" alt="" width="304" height="236"> 
 </div>
