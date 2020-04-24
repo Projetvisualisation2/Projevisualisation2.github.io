@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+<script src="https://d3js.org/d3.v5.min.js"></script>
+
+<style>
+.line1{fill:none; stroke:green; stroke-width:1.5px}
+.line2{fill:none; stroke:red; stroke-width:1.5px}
+.axis {
+	font: 10px sans-serif;
+	}
+	.axis path,
+	.axis line {
+	fill: none;
+	stroke: #0000CD;
+	shape-rendering: crispEdges;
+	}
+</style>
+
+
+</head>
+<body>
+<div>
+<h4>Profil Agrégé de la consommation et du revenu par pole economique au Sénégal</h4>
+<form>
+<label>Selectionner un pole :</label>
+<select id="choix" onchange="wadioubakh()">
+<option>Choisir une option</option>
+<option>Riz</option>
+<option>Ble</option>
+<option>Sorgho</option>
+<option>Mils</option>
+<option>Mais</option>
+<option>Fonio</option>
+
+</select>
+</form>
+<br/>
+<svg id="msda" width="1000" height="300"></svg>
+</div>
+
+<script>
+
+function wadioubakh()
+{
+var pa_nice = d3.select("#msda");
+var mansour = pa_nice.selectAll('*');
+mansour.remove();
+
+var margin = {top:20, right:170, bottom:200, left:70},
+width = 1000 - margin.left - margin.right,
+height = 450 - margin.top - margin.bottom;
+var visual = d3.select("#msda")
+.append("svg")
+.attr("width", width + margin.left + margin.right)
+.attr("height", height + margin.top + margin.bottom)
+.append("g")
+.attr("transform","translate("+margin.left+","+margin.top+")");
+
+var fatim = document.getElementById('choix').selectedOptions[0].text;
+var sala = 'https://projetvisualisation2.github.io/Projevisualisation2.github.io/evodata/'+fatim+ '.csv';
+d3.csv(sala,function(error,data){
+data.forEach(function(d){
+d.age = +d.age;
+d.production = +d.production;
+d.importation = +d.importation;});
+
+A = d3.scale.linear()
+.range([0,width])
+.domain([0,80]);
+
+B = d3.scale.linear()
+.range([height,0])
+.domain([0,d3.max(data, function(d) {return(d.production);})]);
+
+var xAxis = d3.svg.axis().scale(A).orient("bottom");
+
+var yAxis = d3.svg.axis().scale(B).orient("left");
+
+visual.append("g")
+.attr("class", "x axis")
+.attr("transform", "translate(0,"+height+")")
+.call(xAxis);
+
+visual.append("g")
+.attr("class", "y axis")
+.call(yAxis);
+
+var valueline = d3.svg.line()
+.x(function(d){return A(d.age);})
+.y(function(d){return B(d.production);});
+
+var valueline2 = d3.svg.line()
+.x(function(d){return A(d.age);})
+.y(function(d){return B(d.importation);});
+
+var path = visual.append('svg:path')
+.attr("class","line1")
+.attr("d",valueline(data))
+
+var path2 = visual.append('svg:path')
+.attr("class","line2")
+.attr("d",valueline2(data))
+
+});
+}
+</script>
+
+</body>
+</html>
