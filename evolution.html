@@ -1,16 +1,53 @@
+
 <!DOCTYPE html>
 <head>
-<meta charset="utf-8">
+    <meta charset="UTF-8">
+
+<!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Visualisation des données économiques sur les céréales dans la zone CEDEAO | Le site du projet</title>
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="Visualisation des données économiques sur les céréales dans la zone CEDEAO" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Le site du projet" />
+<meta property="og:description" content="Le site du projet" />
+<link rel="canonical" href="https://projetvisualisation2.github.io/Projevisualisation2.github.io/" />
+<meta property="og:url" content="https://projetvisualisation2.github.io/Projevisualisation2.github.io/" />
+<meta property="og:site_name" content="Visualisation des données économiques sur les céréales dans la zone CEDEAO" />
+<script type="application/ld+json">
+{"@type":"WebSite","url":"https://projetvisualisation2.github.io/Projevisualisation2.github.io/","name":"Visualisation des données économiques sur les céréales dans la zone CEDEAO","headline":"Visualisation des données économiques sur les céréales dans la zone CEDEAO","description":"Le site du projet","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <link rel="stylesheet" href="/Projevisualisation2.github.io/assets/css/style.css?v=0dd75407ba4ab3f6f1d64217538581758765ded6">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">Visualisation des données économiques sur les céréales dans la zone CEDEAO</h1>
+      <h2 class="project-tagline">Le site du projet</h2>
+      
+        <a href="https://github.com/Projetvisualisation2/Projevisualisation2.github.io" class="btn">View on GitHub</a>
+      
+      
+    </section>
+
+    <section class="main-content">
+      <html lang="en">
+
+<head>
+<meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-<script src="https://d3js.org/d3.v5.min.js"></script>
+<script src="https://d3js.org/d3.v3.min.js"></script>
+
+</script>
 
 <style>
-.line1{fill:none; stroke:green; stroke-width:1.5px}
-.line2{fill:none; stroke:red; stroke-width:1.5px}
+.line1{fill:none; stroke:green; stroke-width:6px}
+.line2{fill:none; stroke:red; stroke-width:6px}
 .axis {
 	font: 10px sans-serif;
 	}
@@ -18,18 +55,60 @@
 	.axis line {
 	fill: none;
 	stroke: #0000CD;
+	stroke-width:3px;
 	shape-rendering: crispEdges;
+
 	}
+
+	#col1  {
+  
+
+  background: linear-gradient(to top ,  pink, skyblue);
+}
 </style>
 
 
 </head>
-<body>
+<body id ="col1">
+
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <!-- Brand -->
+  <a class="navbar-brand" href="index.html"><img src="image/cereale.png" alt="Logo" style="width:100px; height=100px;"></a>
+  
+
+  <!-- Links -->
+  <ul class="navbar-nav">
+    <li class="nav-item">
+      <a class="nav-link" href="index.html">HOME</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="BartChartIndex.html">Stacked Bart Chart </a>
+    </li>
+  
+   <li class="nav-item">
+      <a class="nav-link" href="evolution.html"> Graphe évolutif </a>
+    </li>
+    
+    <!-- Dropdown -->
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+        Carte Graphique 
+      </a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="importexport.html">Importation - exportation</a>
+        <a class="dropdown-item" href="production.html"> Production </a>
+        
+      </div>
+    </li>
+  </ul>
+</nav>
+<br> 
+
 <div>
-<h4>Profil Agrégé de la consommation et du revenu par pole economique au Sénégal</h4>
+<h5>Evolution de la production et l'importation de cereales au cours des 10 dernieres années</h5>
 <form>
-<label>Selectionner un pole :</label>
-<select id="choix" onchange="wadioubakh()">
+<label>Selectionner un céreale :</label>
+<select id="choix" onchange="changement()">
 <option>Choisir une option</option>
 <option>Riz</option>
 <option>Ble</option>
@@ -41,42 +120,46 @@
 </select>
 </form>
 <br/>
-<svg id="msda" width="1000" height="300"></svg>
+<svg id="evo" width="1000" height="500"></svg>
 </div>
 
 <script>
 
-function wadioubakh()
+function changement()
 {
-var pa_nice = d3.select("#msda");
-var mansour = pa_nice.selectAll('*');
-mansour.remove();
+var doublure = d3.select("#evo");
+var efface = doublure.selectAll('*');
+efface.remove();
 
 var margin = {top:20, right:170, bottom:200, left:70},
 width = 1000 - margin.left - margin.right,
-height = 450 - margin.top - margin.bottom;
-var visual = d3.select("#msda")
+height = 650 - margin.top - margin.bottom;
+var visual = d3.select("#evo")
 .append("svg")
 .attr("width", width + margin.left + margin.right)
 .attr("height", height + margin.top + margin.bottom)
 .append("g")
 .attr("transform","translate("+margin.left+","+margin.top+")");
 
-var fatim = document.getElementById('choix').selectedOptions[0].text;
-var sala = 'https://projetvisualisation2.github.io/Projevisualisation2.github.io/evodata/'+fatim+ '.csv';
-d3.csv(sala,function(error,data){
+var news = document.getElementById('choix').selectedOptions[0].text;
+var donne = 'https://projetvisualisation2.github.io/Projevisualisation2.github.io/evodata/'+news+ '.csv';
+d3.csv(donne,function(error,data){
 data.forEach(function(d){
-d.age = +d.age;
-d.production = +d.production;
-d.importation = +d.importation;});
+d.Annees = +d.Annees;
+d["Production"] = +d["Production"];
+d["Importation"] = +d["Importation"];});
+
+prod = d3.max(data, function(d) {return(d["Production"]);})
+imp = d3.max(data, function(d) {return(d["Importation"]);})
+seuil = prod + imp ;
 
 A = d3.scale.linear()
 .range([0,width])
-.domain([0,80]);
+.domain([2008,2018]);
 
 B = d3.scale.linear()
 .range([height,0])
-.domain([0,d3.max(data, function(d) {return(d.production);})]);
+.domain([0,seuil]);
 
 var xAxis = d3.svg.axis().scale(A).orient("bottom");
 
@@ -92,12 +175,12 @@ visual.append("g")
 .call(yAxis);
 
 var valueline = d3.svg.line()
-.x(function(d){return A(d.age);})
-.y(function(d){return B(d.production);});
+.x(function(d){return A(d.Annees);})
+.y(function(d){return B(d["Production"]);});
 
 var valueline2 = d3.svg.line()
-.x(function(d){return A(d.age);})
-.y(function(d){return B(d.importation);});
+.x(function(d){return A(d.Annees);})
+.y(function(d){return B(d["Importation"]);});
 
 var path = visual.append('svg:path')
 .attr("class","line1")
@@ -108,7 +191,47 @@ var path2 = visual.append('svg:path')
 .attr("d",valueline2(data))
 
 });
+
+
+var svg= d3.select("#evo")
+
+svg.append("rect")
+.attr("x",850)
+.attr("y",30)
+.attr("width",30)
+.attr("height",20)
+.style("stroke","black")
+.style("stroke-width","2")
+.style("fill", "green");
+
+svg.append("rect")
+.attr("x",850)
+.attr("y",65)
+.attr("width",30)
+.attr("height",20)
+.style("stroke","black")
+.style("stroke-width","2")
+.style("fill", "red");
+
+svg.append("text")
+ .attr("x", 895)
+ .attr("y", 50)
+ .style("font-size", "20px")
+ .text("Production");
+
+ svg.append("text")
+ .attr("x", 895)
+ .attr("y", 85)
+ .style("font-size", "20px")
+ .text("Importation");	
+
+
+
+
 }
+
+
+
 </script>
 
 </body>
