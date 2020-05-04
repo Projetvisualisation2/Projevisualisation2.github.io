@@ -62,7 +62,7 @@
 
   
   
-<div class="container"> 
+
   <h3> Specifications </h3>
 
 
@@ -77,22 +77,20 @@ population a été multipliée par 2,5. Compte tenu des réalités sociales (sub
 
 <div class="row">
 <div class="col-md-4">
-<marquee id="id1"  direction="up" behavior="alternate" scrollamount="2" height="500" width="304"  style="border:pink 3px SOLID" ><span onmouseover="getElementById('id1').stop();" onmouseout="getElementById('id1').start();"> </span> 
+<marquee id="id1"  direction="up" behavior="alternate" scrollamount="2" height="500" width="304"  style="border:pink 3px SOLID" ><span onmouseover="getElementById('id1').stop();" onmouseout="getElementById('id1').start();">
 <img src="image/Ble.jpg" class="img-thumbnail" alt="" width="304" height="236"> 
  <img src="image/Fonio.jpg" class="img-thumbnail" alt="" width="304" height="236"> 
  <img src="image/Sorgho.jpg" class="img-thumbnail" alt="" width="304" height="236"> 
  <img src="image/Mil.jpg" class="img-thumbnail" alt="" width="304" height="236"> 
  <img src="image/Riz.jpg" class="img-thumbnail" alt="" width="304" height="236"> 
  <img src="image/Mais.jpg" class="img-thumbnail" alt="" width="304" height="236"> 
-</marquee>
-</div>
+</marquee></div>
 <div class="col-md-8"> 
 <h5 > Pour les différentes visualisations, utiliser la barre de menu pour y accéder, Nous precisons qu'elles sont toutes dynamiques.Par ailleurs nous précisions que les visualisations portant sur la quantité sont exprimées en tonnes et ceux portant sur la valeur en milliers de dollars. </h5><br />
 
 <img src="gg.gif" class="img-thumbnail" alt="" width="400" height="300" /> 
-</div>
-</div>
-</div>
+</div></div>
+
 
 
 </body>
