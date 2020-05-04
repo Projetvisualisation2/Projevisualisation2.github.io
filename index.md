@@ -18,6 +18,14 @@
  
  /*mise en forme de la couleur du fond*/
 }
+
+#spe  {
+  background: Lavender;
+}
+
+#gi  {
+  background: Cornsilk;
+}
 		</style>
 </head>
 <body id= "colo">
@@ -62,20 +70,18 @@
 
   
   
-
-  <h3> Specifications </h3>
-
-
-   
-
-  <p>La demande alimentaire de la population ouest africaine est de plus en plus focalisée sur les
+<div id="spe">
+  <h3> <mark>Specifications </mark> </h3>
+  <p style="text-align: justify;">La demande alimentaire de la population ouest africaine est de plus en plus focalisée sur les
 céréales. La consommation céréalière a donc triplé en moins de 30 ans, pendant que la
 population a été multipliée par 2,5. Compte tenu des réalités sociales (subsahariennes), nous avons jugé bon d’effectuer nos visualisations sur six (06) céréales qui sont le Riz, le Sorgho, le Fonio, Le Mais, le Mil, le Blé. En plus de cela s’ajoute la période d’observation qui a été réduite sur les dix (10) dernières années en vue d’obtenir une visualisation plus crédible. </p><br>
-
+</div>
+<br>
+<br>
 
 <div class= "container-fluid">
 
-<div class="row">
+<div class="row" id="gi">
 <div class="col-md-4">
 <marquee id="id1"  direction="up" behavior="alternate" scrollamount="5" height="600" width="254"  style="border:pink 3px SOLID" ><span onmouseover="getElementById('id1').stop();" onmouseout="getElementById('id1').start();"/>
 <img src="image/Ble.jpg" class="img-thumbnail" alt="" width="304" height="236"/> 
@@ -86,7 +92,12 @@ population a été multipliée par 2,5. Compte tenu des réalités sociales (sub
  <img src="image/Mais.jpg" class="img-thumbnail" alt="" width="304" height="236"/> 
 </marquee></div>
 <div class="col-md-8"> 
-<h5 > Pour les différentes visualisations, utiliser la barre de menu pour y accéder, Nous precisons qu'elles sont toutes dynamiques.Par ailleurs nous précisions que les visualisations portant sur la quantité sont exprimées en tonnes et ceux portant sur la valeur en milliers de dollars. </h5><br />
+<ul style="list-style-type:circle;">
+  <li style="text-align: justify;">Pour les différentes visualisations, utiliser la barre de menu pour y accéder</li>
+  <li style="text-align: justify;">Nous precisons qu'elles sont toutes dynamiques</li>
+  <li> style="text-align: justify;"Par ailleurs nous précisions que les visualisations portant sur la quantité sont exprimées en tonnes 	et ceux portant sur la valeur en milliers de dollars</li>
+</ul>
+<br>
 
 <img src="gg.gif" class="img-thumbnail" alt="" width="700" height="500" /> 
 </div></div>
