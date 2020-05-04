@@ -70,7 +70,7 @@
 
   <p>La demande alimentaire de la population ouest africaine est de plus en plus focalisée sur les
 céréales. La consommation céréalière a donc triplé en moins de 30 ans, pendant que la
-population a été multipliée par 2,5. Compte tenu des réalités sociales (subsahariennes), nous avons jugé bon d’effectuer nos visualisations sur six (06) céréales qui sont le Riz, le Sorgho, le Fonio, Le Mais, le Mil, le Blé. En plus de cela s’ajoute la période d’observation qui a été réduite sur les dix (10) dernières années en vue d’obtenir une visualisation plus crédible. </p><br />
+population a été multipliée par 2,5. Compte tenu des réalités sociales (subsahariennes), nous avons jugé bon d’effectuer nos visualisations sur six (06) céréales qui sont le Riz, le Sorgho, le Fonio, Le Mais, le Mil, le Blé. En plus de cela s’ajoute la période d’observation qui a été réduite sur les dix (10) dernières années en vue d’obtenir une visualisation plus crédible. </p><br>
 
 
 <div class= "container-fluid">
@@ -89,7 +89,7 @@ population a été multipliée par 2,5. Compte tenu des réalités sociales (sub
 <div class="col-md-8"> 
 <h5 > Pour les différentes visualisations, utiliser la barre de menu pour y accéder, Nous precisons qu'elles sont toutes dynamiques.Par ailleurs nous précisions que les visualisations portant sur la quantité sont exprimées en tonnes et ceux portant sur la valeur en milliers de dollars. </h5><br />
 
-<img src="C:/Users/oued soud/Videos/Captures/gg.gif" class="img-thumbnail" alt="" width="700" height="500" /> 
+<img src="gg.gif" class="img-thumbnail" alt="" width="400" height="300" /> 
 </div>
 </div>
 </div>
