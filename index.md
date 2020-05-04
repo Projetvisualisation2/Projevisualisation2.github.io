@@ -91,7 +91,7 @@ population a été multipliée par 2,5. Compte tenu des réalités sociales (sub
  <img src="image/Riz.jpg" class="img-thumbnail" alt="" width="304" height="236"/> 
  <img src="image/Mais.jpg" class="img-thumbnail" alt="" width="304" height="236"/> 
 </marquee></div>
-<div class="col-md-8" id="gi" style="border: 7px Lavender ridge;" > 
+<div class="col-md-8" id="gi" style="border-radius:  10px;" > 
 <ul style="list-style-type:square;">
   <li style="text-align: justify;">Pour les différentes visualisations, utiliser la barre de menu pour y accéder</li><br>
   <li style="text-align: justify;">Nous precisons qu'elles sont toutes dynamiques</li><br>
