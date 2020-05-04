@@ -81,9 +81,9 @@ population a été multipliée par 2,5. Compte tenu des réalités sociales (sub
 
 <div class= "container-fluid">
 
-<div class="row"  style="border: 3px Lavender ridge;">
-<div class="col-md-4" id="spe">
-<marquee id="id1"  direction="up" behavior="alternate" scrollamount="5" height="600" width="234"  style="border:pink 3px SOLID" ><span onmouseover="getElementById('id1').stop();" onmouseout="getElementById('id1').start();"/>
+<div class="row"  >
+<div class="col-md-4" id="spe" style="border: 3px Lavender ridge;">
+<marquee id="id1"  direction="up" behavior="alternate" scrollamount="5" height="600" width="244"  style="border:pink 3px SOLID" ><span onmouseover="getElementById('id1').stop();" onmouseout="getElementById('id1').start();"/>
 <img src="image/Ble.jpg" class="img-thumbnail" alt="" width="304" height="236"/> 
  <img src="image/Fonio.jpg" class="img-thumbnail" alt="" width="304" height="236"/> 
  <img src="image/Sorgho.jpg" class="img-thumbnail" alt="" width="304" height="236"/> 
@@ -91,7 +91,7 @@ population a été multipliée par 2,5. Compte tenu des réalités sociales (sub
  <img src="image/Riz.jpg" class="img-thumbnail" alt="" width="304" height="236"/> 
  <img src="image/Mais.jpg" class="img-thumbnail" alt="" width="304" height="236"/> 
 </marquee></div>
-<div class="col-md-8" id="gi"> 
+<div class="col-md-8" id="gi"  style="border-radius:  10px;"> 
 <ul style="list-style-type:square;">
   <li style="text-align: justify;">Pour les différentes visualisations, utiliser la barre de menu pour y accéder</li><br>
   <li style="text-align: justify;">Nous precisons qu'elles sont toutes dynamiques</li><br>
