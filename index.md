@@ -71,10 +71,11 @@
   
   
 <div id="spe">
+<br>
   <h3> <mark>Specifications </mark> </h3>
   <p style="text-align: justify;">La demande alimentaire de la population ouest africaine est de plus en plus focalisée sur les
 céréales. La consommation céréalière a donc triplé en moins de 30 ans, pendant que la
-population a été multipliée par 2,5. Compte tenu des réalités sociales (subsahariennes), nous avons jugé bon d’effectuer nos visualisations sur six (06) céréales qui sont le Riz, le Sorgho, le Fonio, Le Mais, le Mil, le Blé. En plus de cela s’ajoute la période d’observation qui a été réduite sur les dix (10) dernières années en vue d’obtenir une visualisation plus crédible. </p><br>
+population a été multipliée par 2,5. Compte tenu des réalités sociales (subsahariennes), nous avons jugé bon d’effectuer nos visualisations sur six (06) céréales qui sont le Riz, le Sorgho, le Fonio, Le Mais, le Mil, le Blé. En plus de cela s’ajoute la période d’observation qui a été réduite sur les dix (10) dernières années en vue d’obtenir une visualisation plus crédible. </p>
 </div>
 <br>
 <br>
@@ -92,10 +93,10 @@ population a été multipliée par 2,5. Compte tenu des réalités sociales (sub
  <img src="image/Mais.jpg" class="img-thumbnail" alt="" width="304" height="236"/> 
 </marquee></div>
 <div class="col-md-8"> 
-<ul style="list-style-type:circle;">
-  <li style="text-align: justify;">Pour les différentes visualisations, utiliser la barre de menu pour y accéder</li>
-  <li style="text-align: justify;">Nous precisons qu'elles sont toutes dynamiques</li>
-  <li> style="text-align: justify;"Par ailleurs nous précisions que les visualisations portant sur la quantité sont exprimées en tonnes 	et ceux portant sur la valeur en milliers de dollars</li>
+<ul style="list-style-type:square;">
+  <li style="text-align: justify;">Pour les différentes visualisations, utiliser la barre de menu pour y accéder</li><br>
+  <li style="text-align: justify;">Nous precisons qu'elles sont toutes dynamiques</li><br>
+  <li> style="text-align: justify;">Par ailleurs nous précisions que les visualisations portant sur la quantité sont exprimées en tonnes 	et ceux portant sur la valeur en milliers de dollars</li><br>
 </ul>
 <br>
 
