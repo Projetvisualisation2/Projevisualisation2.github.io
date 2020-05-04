@@ -70,7 +70,7 @@
 
   
   
-<div id="spe" style="border: 3px  Cornsilk inset;">
+<div id="spe" style="border-raduis: 3px  Cornsilk inset;">
   <h3> <mark>Specifications </mark> </h3>
   <p style="text-align: justify;">La demande alimentaire de la population ouest africaine est de plus en plus focalisée sur les
 céréales. La consommation céréalière a donc triplé en moins de 30 ans, pendant que la
@@ -93,9 +93,9 @@ population a été multipliée par 2,5. Compte tenu des réalités sociales (sub
 </marquee></div>
 <div class="col-md-8"> 
 <ul style="list-style-type:square;">
-  <li> style="text-align: justify;">Pour les différentes visualisations, utiliser la barre de menu pour y accéder</li><br>
-  <li> style="text-align: justify;">Nous precisons qu'elles sont toutes dynamiques</li><br>
-  <li> style="text-align: justify;">Par ailleurs nous précisions que les visualisations portant sur la quantité sont exprimées en tonnes 	et ceux portant sur la valeur en milliers de dollars</li><br>
+  <li style="text-align: justify;">Pour les différentes visualisations, utiliser la barre de menu pour y accéder</li><br>
+  <li style="text-align: justify;">Nous precisons qu'elles sont toutes dynamiques</li><br>
+  <li style="text-align: justify;">Par ailleurs nous précisions que les visualisations portant sur la quantité sont exprimées en tonnes 	et ceux portant sur la valeur en milliers de dollars</li><br>
 </ul>
 <br>
 
