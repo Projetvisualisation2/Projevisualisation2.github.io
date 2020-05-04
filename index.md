@@ -70,7 +70,7 @@
 
   
   
-<div id="spe" style="border-raduis: 15px  Cornsilk inset;">
+<div id="spe" style="border-raduis: 15px ;">
   <h3> <mark>Specifications </mark> </h3>
   <p >La demande alimentaire de la population ouest africaine est de plus en plus focalisée sur les
 céréales. La consommation céréalière a donc triplé en moins de 30 ans, pendant que la
@@ -82,7 +82,7 @@ population a été multipliée par 2,5. Compte tenu des réalités sociales (sub
 <div class= "container-fluid">
 
 <div class="row"  style="border: 3px Lavender inset;">
-<div class="col-md-4" id="gi">
+<div class="col-md-4" id="spe">
 <marquee id="id1"  direction="up" behavior="alternate" scrollamount="5" height="600" width="254"  style="border:pink 3px SOLID" ><span onmouseover="getElementById('id1').stop();" onmouseout="getElementById('id1').start();"/>
 <img src="image/Ble.jpg" class="img-thumbnail" alt="" width="304" height="236"/> 
  <img src="image/Fonio.jpg" class="img-thumbnail" alt="" width="304" height="236"/> 
@@ -91,7 +91,7 @@ population a été multipliée par 2,5. Compte tenu des réalités sociales (sub
  <img src="image/Riz.jpg" class="img-thumbnail" alt="" width="304" height="236"/> 
  <img src="image/Mais.jpg" class="img-thumbnail" alt="" width="304" height="236"/> 
 </marquee></div>
-<div class="col-md-8" id="spe"> 
+<div class="col-md-8" id="gi"> 
 <ul style="list-style-type:square;">
   <li style="text-align: justify;">Pour les différentes visualisations, utiliser la barre de menu pour y accéder</li><br>
   <li style="text-align: justify;">Nous precisons qu'elles sont toutes dynamiques</li><br>
