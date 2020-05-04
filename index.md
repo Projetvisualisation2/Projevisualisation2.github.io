@@ -59,22 +59,41 @@
 </nav>
 <br>
   
+
+  
+  
 <div class="container"> 
   <h3> Specifications </h3>
+
+
+   
+
   <p>La demande alimentaire de la population ouest africaine est de plus en plus focalisée sur les
 céréales. La consommation céréalière a donc triplé en moins de 30 ans, pendant que la
-population a été multipliée par 2,5. Compte tenu des réalités sociales (subsahariennes), nous avons jugé bon d’effectuer nos visualisations sur six (06) céréales qui sont le Riz, le Sorgho, le Fonio, Le Mais, le Mil, le Blé. En plus de cela s’ajoute la période d’observation qui a été réduite sur les dix (10) dernières années en vue d’obtenir une visualisation plus crédible. </p><br>
+population a été multipliée par 2,5. Compte tenu des réalités sociales (subsahariennes), nous avons jugé bon d’effectuer nos visualisations sur six (06) céréales qui sont le Riz, le Sorgho, le Fonio, Le Mais, le Mil, le Blé. En plus de cela s’ajoute la période d’observation qui a été réduite sur les dix (10) dernières années en vue d’obtenir une visualisation plus crédible. </p><br />
 
-<h5> Pour les différentes visualisations, utiliser la barre de menu pour y accéder, Nous precisons qu'elles sont toutes dynamiques.Par ailleurs nous précisions que les visualisations portant sur la quantité sont exprimées en tonnes et ceux portant sur la valeur en milliers de dollars. </h5><br>
-  
- <img src="image/Ble.jpg" class="rounded-circle" alt="" width="304" height="236"> 
- <img src="image/Fonio.jpg" class="rounded-circle" alt="" width="304" height="236"> 
+
+<div class= "container-fluid">
+
+<div class="row">
+<div class="col-md-4">
+<marquee id="id1"  direction="up" behavior="alternate" scrollamount="2" height="500" width="304"  style="border:pink 3px SOLID" ><span onmouseover="getElementById('id1').stop();" onmouseout="getElementById('id1').start();">  
+<img src="image/Ble.jpg" class="img-thumbnail" alt="" width="304" height="236"> 
+ <img src="image/Fonio.jpg" class="img-thumbnail" alt="" width="304" height="236"> 
  <img src="image/Sorgho.jpg" class="img-thumbnail" alt="" width="304" height="236"> 
  <img src="image/Mil.jpg" class="img-thumbnail" alt="" width="304" height="236"> 
- <img src="image/Riz.jpg" class="rounded-circle" alt="" width="304" height="236"> 
- <img src="image/Mais.jpg" class="rounded-circle" alt="" width="304" height="236"> 
- 
+ <img src="image/Riz.jpg" class="img-thumbnail" alt="" width="304" height="236"> 
+ <img src="image/Mais.jpg" class="img-thumbnail" alt="" width="304" height="236"> 
+</marquee>
 </div>
+<div class="col-md-8"> 
+<h5 > Pour les différentes visualisations, utiliser la barre de menu pour y accéder, Nous precisons qu'elles sont toutes dynamiques.Par ailleurs nous précisions que les visualisations portant sur la quantité sont exprimées en tonnes et ceux portant sur la valeur en milliers de dollars. </h5><br />
+
+<img src="C:/Users/oued soud/Videos/Captures/gg.gif" class="img-thumbnail" alt="" width="700" height="500" /> 
+</div>
+</div>
+</div>
+
 
 </body>
 </html>
