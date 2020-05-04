@@ -70,7 +70,7 @@
 
   
   
-<div id="spe" style="border-radius:  10px;>
+<div id="spe" style="border-radius:  10px;">
   <h3> <mark>Specifications </mark> </h3>
   <p >La demande alimentaire de la population ouest africaine est de plus en plus focalisée sur les
 céréales. La consommation céréalière a donc triplé en moins de 30 ans, pendant que la
