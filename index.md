@@ -28,7 +28,7 @@
 }
 		</style>
 </head>
-<body id= "colo">
+<body >
 
 <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
   <!-- Brand -->
