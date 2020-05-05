@@ -34,6 +34,12 @@
   <!-- Brand -->
   <a class="navbar-brand" href="index.html"><img src="image/cereale.png" alt="Logo" style="width:100px; height=100px;"></a>
   
+  <!-- Links -->
+  <ul class="navbar-nav">
+    <li class="nav-item">
+      <a class="nav-link" href="index.html">HOME</a>
+    </li>
+	
   <!-- Dropdown -->
     <li class="nav-item dropdown">
       <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
@@ -45,11 +51,6 @@
       </div>
     </li>
 
-  <!-- Links -->
-  <ul class="navbar-nav">
-    <li class="nav-item">
-      <a class="nav-link" href="index.html">HOME</a>
-    </li>
     <li class="nav-item">
       <a class="nav-link" href="BartChartIndex.html">Stacked Bart Chart </a>
     </li>
@@ -107,5 +108,5 @@ population a été multipliée par 2,5. Compte tenu des réalités sociales (sub
 </ul>
 <br>
 
-<img style="border-color: Lavender;border-width: 5px;"src="gg.gif" class="img-thumbnail" alt="" width="700" height="500" /> 
+<img  src="gg.gif" class="img-thumbnail" alt="" width="700" height="500" style="border-color: Lavender;border-width: 5px;"/> 
 </div></div>
